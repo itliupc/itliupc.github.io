@@ -1,11 +1,11 @@
-# Hexo Configuration
+ï»¿# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: DoBase
-subtitle: ÖªÊ¶¹ÜÀí,Ê±¼ä¹ÜÀí,×ÔÎÒ¹ÜÀí
-description: ÖªÊ¶¹ÜÀí,Ê±¼ä¹ÜÀí,×ÔÎÒ¹ÜÀí
+title: å¤§æ±Ÿä¸œå»
+subtitle: çŸ¥è¯†ç®¡ç†,æ—¶é—´ç®¡ç†,è‡ªæˆ‘ç®¡ç†
+description: çŸ¥è¯†ç®¡ç†,æ—¶é—´ç®¡ç†,è‡ªæˆ‘ç®¡ç†
 author: liupengcheng
 language: zh_CN
 timezone:
