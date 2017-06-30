@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>DoBase</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="֪ʶ����,ʱ������,���ҹ���">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DoBase">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="DoBase">
+<meta property="og:description" content="֪ʶ����,ʱ������,���ҹ���">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="DoBase">
+<meta name="twitter:description" content="֪ʶ����,ʱ������,���ҹ���">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="DoBase" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,8 +36,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">DoBase</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">֪ʶ����,ʱ������,���ҹ���</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -83,32 +90,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>һ�����ڴ������</p>
+        <p>一、关于搭建的流程</p>
 <ol>
-<li>�����ֿ⣬<a href="http://CrazyMilk.github.io��" target="_blank" rel="external">http://CrazyMilk.github.io��</a></li>
-<li>����������֧��master �� hexo��</li>
-<li>����hexoΪĬ�Ϸ�֧����Ϊ����ֻ��Ҫ�ֶ�����������֧�ϵ�Hexo��վ�ļ�����</li>
-<li>ʹ��git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git�����ֿ⣻</li>
-<li>�ڱ���<a href="http://CrazyMilk.github.io�ļ�����ͨ��Git" target="_blank" rel="external">http://CrazyMilk.github.io�ļ�����ͨ��Git</a> bash����ִ��npm install hexo��hexo init��npm install �� npm install hexo-deployer-git����ʱ��ǰ��֧Ӧ��ʾΪhexo��;</li>
-<li>�޸�_config.yml�е�deploy��������֧ӦΪmaster��</li>
-<li>����ִ��git add .��git commit -m “…”��git push origin hexo�ύ��վ���ص��ļ���</li>
-<li>ִ��hexo g -d������վ��������GitHub�ϡ�<br>����һ������GitHub�ϵ�<a href="http://CrazyMilk.github.io�ֿ�����������֧��һ��hexo��֧����������վ��ԭʼ�ļ���һ��master��֧�����������ɵľ�̬��ҳ��" target="_blank" rel="external">http://CrazyMilk.github.io�ֿ�����������֧��һ��hexo��֧����������վ��ԭʼ�ļ���һ��master��֧�����������ɵľ�̬��ҳ��</a></li>
+<li>创建仓库，<a href="http://CrazyMilk.github.io；" target="_blank" rel="external">http://CrazyMilk.github.io；</a></li>
+<li>创建两个分支：master 与 hexo；</li>
+<li>设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；</li>
+<li>使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库；</li>
+<li>在本地<a href="http://CrazyMilk.github.io文件夹下通过Git" target="_blank" rel="external">http://CrazyMilk.github.io文件夹下通过Git</a> bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;</li>
+<li>修改_config.yml中的deploy参数，分支应为master；</li>
+<li>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；</li>
+<li>执行hexo g -d生成网站并部署到GitHub上。<br>这样一来，在GitHub上的<a href="http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。" target="_blank" rel="external">http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。</a></li>
 </ol>
-<p>���������ճ��ĸĶ������ڱ��ضԲ��ͽ����޸ģ������²��ġ��޸���ʽ�ȵȣ�����ͨ�����������̽��й�����</p>
+<p>二、关于日常的改动流程在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。</p>
 <ol>
-<li>����ִ��git add .��git commit -m “…”��git push origin hexoָ��Ķ����͵�GitHub����ʱ��ǰ��֧ӦΪhexo����</li>
-<li>Ȼ����ִ��hexo g -d������վ��master��֧�ϡ���Ȼ��������˳����תһ�㲻�������⣬�����߼���������˳���Ǿ���û�����ġ�</li>
+<li>依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；</li>
+<li>然后才执行hexo g -d发布网站到master分支上。虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的。</li>
 </ol>
-<p>�����������϶�ʧ�������̵���װ����֮�󣬻������������������޸Ĳ��ͣ�����ʹ�����в��裺</p>
+<p>三、本地资料丢失后的流程当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p>
 <ol>
-<li>ʹ��git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git�����ֿ⣨Ĭ�Ϸ�֧Ϊhexo����</li>
-<li>�ڱ����¿�����<a href="http://CrazyMilk.github.io�ļ�����ͨ��Git" target="_blank" rel="external">http://CrazyMilk.github.io�ļ�����ͨ��Git</a> bash����ִ������ָ�npm install hexo��npm install��npm install hexo-deployer-git���ǵã�����Ҫhexo init����ָ���</li>
+<li>使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库（默认分支为hexo）；</li>
+<li>在本地新拷贝的<a href="http://CrazyMilk.github.io文件夹下通过Git" target="_blank" rel="external">http://CrazyMilk.github.io文件夹下通过Git</a> bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）。</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/hexo-first/" data-id="cj4k1gnew0001o0xi5578cyvs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/hexo-first/" data-id="cj4k1x1gh0001lsxilqbhkkg1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,7 +160,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/30/hello-world/" data-id="cj4k1gndx0000o0xi03tdvveu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/30/hello-world/" data-id="cj4k1x1fj0000lsxijibzqyon" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,7 +187,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li></ul>
     </div>
   </div>
 
@@ -212,7 +219,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2017 liupengcheng<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

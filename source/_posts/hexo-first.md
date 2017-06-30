@@ -1,4 +1,4 @@
----
+ï»¿---
 title: hexo-first
 date: 2017-06-30 23:39:24
 tags:
@@ -7,23 +7,23 @@ tags:
 
 
 
-Ò»¡¢¹ØÓÚ´î½¨µÄÁ÷³Ì
-1. ´´½¨²Ö¿â£¬http://CrazyMilk.github.io£»
-2. ´´½¨Á½¸ö·ÖÖ§£ºmaster Óë hexo£»
-3. ÉèÖÃhexoÎªÄ¬ÈÏ·ÖÖ§£¨ÒòÎªÎÒÃÇÖ»ĞèÒªÊÖ¶¯¹ÜÀíÕâ¸ö·ÖÖ§ÉÏµÄHexoÍøÕ¾ÎÄ¼ş£©£»
-4. Ê¹ÓÃgit clone git@github.com:CrazyMilk/CrazyMilk.github.io.git¿½±´²Ö¿â£»
-5. ÔÚ±¾µØhttp://CrazyMilk.github.ioÎÄ¼ş¼ĞÏÂÍ¨¹ıGit bashÒÀ´ÎÖ´ĞĞnpm install hexo¡¢hexo init¡¢npm install ºÍ npm install hexo-deployer-git£¨´ËÊ±µ±Ç°·ÖÖ§Ó¦ÏÔÊ¾Îªhexo£©;
-6. ĞŞ¸Ä_config.ymlÖĞµÄdeploy²ÎÊı£¬·ÖÖ§Ó¦Îªmaster£»
-7. ÒÀ´ÎÖ´ĞĞgit add .¡¢git commit -m "..."¡¢git push origin hexoÌá½»ÍøÕ¾Ïà¹ØµÄÎÄ¼ş£»
-8. Ö´ĞĞhexo g -dÉú³ÉÍøÕ¾²¢²¿Êğµ½GitHubÉÏ¡£
-ÕâÑùÒ»À´£¬ÔÚGitHubÉÏµÄhttp://CrazyMilk.github.io²Ö¿â¾ÍÓĞÁ½¸ö·ÖÖ§£¬Ò»¸öhexo·ÖÖ§ÓÃÀ´´æ·ÅÍøÕ¾µÄÔ­Ê¼ÎÄ¼ş£¬Ò»¸ömaster·ÖÖ§ÓÃÀ´´æ·ÅÉú³ÉµÄ¾²Ì¬ÍøÒ³¡£
+ä¸€ã€å…³äºæ­å»ºçš„æµç¨‹
+1. åˆ›å»ºä»“åº“ï¼Œhttp://CrazyMilk.github.ioï¼›
+2. åˆ›å»ºä¸¤ä¸ªåˆ†æ”¯ï¼šmaster ä¸ hexoï¼›
+3. è®¾ç½®hexoä¸ºé»˜è®¤åˆ†æ”¯ï¼ˆå› ä¸ºæˆ‘ä»¬åªéœ€è¦æ‰‹åŠ¨ç®¡ç†è¿™ä¸ªåˆ†æ”¯ä¸Šçš„Hexoç½‘ç«™æ–‡ä»¶ï¼‰ï¼›
+4. ä½¿ç”¨git clone git@github.com:CrazyMilk/CrazyMilk.github.io.gitæ‹·è´ä»“åº“ï¼›
+5. åœ¨æœ¬åœ°http://CrazyMilk.github.ioæ–‡ä»¶å¤¹ä¸‹é€šè¿‡Git bashä¾æ¬¡æ‰§è¡Œnpm install hexoã€hexo initã€npm install å’Œ npm install hexo-deployer-gitï¼ˆæ­¤æ—¶å½“å‰åˆ†æ”¯åº”æ˜¾ç¤ºä¸ºhexoï¼‰;
+6. ä¿®æ”¹_config.ymlä¸­çš„deployå‚æ•°ï¼Œåˆ†æ”¯åº”ä¸ºmasterï¼›
+7. ä¾æ¬¡æ‰§è¡Œgit add .ã€git commit -m "..."ã€git push origin hexoæäº¤ç½‘ç«™ç›¸å…³çš„æ–‡ä»¶ï¼›
+8. æ‰§è¡Œhexo g -dç”Ÿæˆç½‘ç«™å¹¶éƒ¨ç½²åˆ°GitHubä¸Šã€‚
+è¿™æ ·ä¸€æ¥ï¼Œåœ¨GitHubä¸Šçš„http://CrazyMilk.github.ioä»“åº“å°±æœ‰ä¸¤ä¸ªåˆ†æ”¯ï¼Œä¸€ä¸ªhexoåˆ†æ”¯ç”¨æ¥å­˜æ”¾ç½‘ç«™çš„åŸå§‹æ–‡ä»¶ï¼Œä¸€ä¸ªmasteråˆ†æ”¯ç”¨æ¥å­˜æ”¾ç”Ÿæˆçš„é™æ€ç½‘é¡µã€‚
 
 
-¶ş¡¢¹ØÓÚÈÕ³£µÄ¸Ä¶¯Á÷³ÌÔÚ±¾µØ¶Ô²©¿Í½øĞĞĞŞ¸Ä£¨Ìí¼ÓĞÂ²©ÎÄ¡¢ĞŞ¸ÄÑùÊ½µÈµÈ£©ºó£¬Í¨¹ıÏÂÃæµÄÁ÷³Ì½øĞĞ¹ÜÀí¡£
-1. ÒÀ´ÎÖ´ĞĞgit add .¡¢git commit -m "..."¡¢git push origin hexoÖ¸Áî½«¸Ä¶¯ÍÆËÍµ½GitHub£¨´ËÊ±µ±Ç°·ÖÖ§Ó¦Îªhexo£©£»
-2. È»ºó²ÅÖ´ĞĞhexo g -d·¢²¼ÍøÕ¾µ½master·ÖÖ§ÉÏ¡£ËäÈ»Á½¸ö¹ı³ÌË³Ğòµ÷×ªÒ»°ã²»»áÓĞÎÊÌâ£¬²»¹ıÂß¼­ÉÏÕâÑùµÄË³ĞòÊÇ¾ø¶ÔÃ»ÎÊÌâµÄ¡£
+äºŒã€å…³äºæ—¥å¸¸çš„æ”¹åŠ¨æµç¨‹åœ¨æœ¬åœ°å¯¹åšå®¢è¿›è¡Œä¿®æ”¹ï¼ˆæ·»åŠ æ–°åšæ–‡ã€ä¿®æ”¹æ ·å¼ç­‰ç­‰ï¼‰åï¼Œé€šè¿‡ä¸‹é¢çš„æµç¨‹è¿›è¡Œç®¡ç†ã€‚
+1. ä¾æ¬¡æ‰§è¡Œgit add .ã€git commit -m "..."ã€git push origin hexoæŒ‡ä»¤å°†æ”¹åŠ¨æ¨é€åˆ°GitHubï¼ˆæ­¤æ—¶å½“å‰åˆ†æ”¯åº”ä¸ºhexoï¼‰ï¼›
+2. ç„¶åæ‰æ‰§è¡Œhexo g -då‘å¸ƒç½‘ç«™åˆ°masteråˆ†æ”¯ä¸Šã€‚è™½ç„¶ä¸¤ä¸ªè¿‡ç¨‹é¡ºåºè°ƒè½¬ä¸€èˆ¬ä¸ä¼šæœ‰é—®é¢˜ï¼Œä¸è¿‡é€»è¾‘ä¸Šè¿™æ ·çš„é¡ºåºæ˜¯ç»å¯¹æ²¡é—®é¢˜çš„ã€‚
 
-Èı¡¢±¾µØ×ÊÁÏ¶ªÊ§ºóµÄÁ÷³Ìµ±ÖØ×°µçÄÔÖ®ºó£¬»òÕßÏëÔÚÆäËûµçÄÔÉÏĞŞ¸Ä²©¿Í£¬¿ÉÒÔÊ¹ÓÃÏÂÁĞ²½Öè£º
+ä¸‰ã€æœ¬åœ°èµ„æ–™ä¸¢å¤±åçš„æµç¨‹å½“é‡è£…ç”µè„‘ä¹‹åï¼Œæˆ–è€…æƒ³åœ¨å…¶ä»–ç”µè„‘ä¸Šä¿®æ”¹åšå®¢ï¼Œå¯ä»¥ä½¿ç”¨ä¸‹åˆ—æ­¥éª¤ï¼š
 
-1. Ê¹ÓÃgit clone git@github.com:CrazyMilk/CrazyMilk.github.io.git¿½±´²Ö¿â£¨Ä¬ÈÏ·ÖÖ§Îªhexo£©£»
-2. ÔÚ±¾µØĞÂ¿½±´µÄhttp://CrazyMilk.github.ioÎÄ¼ş¼ĞÏÂÍ¨¹ıGit bashÒÀ´ÎÖ´ĞĞÏÂÁĞÖ¸Áî£ºnpm install hexo¡¢npm install¡¢npm install hexo-deployer-git£¨¼ÇµÃ£¬²»ĞèÒªhexo initÕâÌõÖ¸Áî£©¡£
+1. ä½¿ç”¨git clone git@github.com:CrazyMilk/CrazyMilk.github.io.gitæ‹·è´ä»“åº“ï¼ˆé»˜è®¤åˆ†æ”¯ä¸ºhexoï¼‰ï¼›
+2. åœ¨æœ¬åœ°æ–°æ‹·è´çš„http://CrazyMilk.github.ioæ–‡ä»¶å¤¹ä¸‹é€šè¿‡Git bashä¾æ¬¡æ‰§è¡Œä¸‹åˆ—æŒ‡ä»¤ï¼šnpm install hexoã€npm installã€npm install hexo-deployer-gitï¼ˆè®°å¾—ï¼Œä¸éœ€è¦hexo initè¿™æ¡æŒ‡ä»¤ï¼‰ã€‚
