@@ -68,6 +68,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:git
-  repo:https://dobase:since1990@github.com/dobase/dobase.github.io.git
-  branch:master
+  type: git
+  repo: https://dobase:since1990@github.com/dobase/dobase.github.io.git
+  branch: master
