@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+title: DoBase
+subtitle: 知识管理,时间管理,自我管理
+description: 知识管理,时间管理,自我管理
+author: liupengcheng
+language: zh_CN
 timezone:
 
 # URL
