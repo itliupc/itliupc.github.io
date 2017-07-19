@@ -10,7 +10,7 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ### Create a new post
 
-<iframe frameborder=0 width="100%" src="/publish/test.html"/>
+<iframe frameborder=0 width="100%" height="400px" src="/publish/test.html"/>
 
 ``` bash
 $ hexo new "My New Post"
