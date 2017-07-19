@@ -2,7 +2,6 @@ title: test
 speaker: liupc
 url: https://github.com/ksky521/nodeppt
 transition: cards
-files: /js/demo.js,/css/demo.css
 
 [slide]
 
