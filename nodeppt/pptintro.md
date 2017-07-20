@@ -1,41 +1,43 @@
-title: test
+title: nodeppt介绍
 speaker: liupc
 url: https://github.com/ksky521/nodeppt
 transition: cards
 
 [slide]
-
-# test
+# nodeppt介绍
 ## 演讲者：liupc
 
-
-* 列表支持渐显动画 {:&.moveIn}
-* 支持多级列表
-* 这个动画是moveIn
-
-[slide]
-
-# 封面样式2 {:&.zoomIn}
-## 左对齐
-
 [slide style="background-image:url('/img/bg1.png')"]
-
-## 使用背景
+- nodeppt是基于nodejs写的支持 **Markdown!** 语法的网页PPT {:&.moveIn}
+- Github：https://github.com/ksky521/nodeppt
 
 [slide]
-## 使用.class/#id/自定义属性样式
+## 安装
 ----
 
-```javascript
-alert('nodeppt');
+```bash
+npm install -g nodeppt
 ```
 
 [slide]
-
-## 主页面样式
-### ----是上下分界线
+## shell使用
 ----
 
-nodeppt是基于nodejs写的支持 **Markdown!** 语法的网页PPT，当前版本：1.4.5
+```bash
+# 获取帮助 
+nodeppt start -h 
 
-Github：https://github.com/ksky521/nodeppt
+# 绑定端口 
+nodeppt start -p <port>
+```
+
+```bash
+nodeppt start -p 8090 -d path/for/ppts 
+# 绑定host，默认绑定0.0.0.0 
+nodeppt start -p 8080 -d path/for/ppts -h 127.0.0.1 
+# 使用socket通信（按Q键显示/关闭二维码，手机扫描，即可控制） 
+# socket须知：1、注意手机和pc要可以相互访问，2、防火墙，3、ip 
+nodeppt start -c socket 
+# 不加-c默认使用postMessage，窗口联动，即list页面【多窗口】链接
+```
+

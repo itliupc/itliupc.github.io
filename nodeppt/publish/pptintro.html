@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>test - By liupc</title>
+    <title>nodeppt介绍 - By liupc</title>
     <link rel="stylesheet" media="all" href="./css/nodeppt.css">
     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./css/phone.css">
     
@@ -21,41 +21,45 @@
 <div class="slides">
     <slides id="container">
         <slide class="slide"><section class="slide-wrapper"><article class="flexbox vcenter">
-<h1>test</h1>
+<h1>nodeppt介绍</h1>
 <h2>演讲者：liupc</h2>
-<ul class="moveIn">
-<li>列表支持渐显动画</li>
-<li>支持多级列表</li>
-<li>这个动画是moveIn</li>
-</ul>
-
-</article></section></slide>
-<slide class="slide"><section class="slide-wrapper"><article class="zoomIn">
-<h1>封面样式2</h1>
-<h2>左对齐</h2>
 
 </article></section></slide>
 <slide class="slide fill" style="background-image:url('./img/bg1.png')"><section class="slide-wrapper"><article>
-<h2>使用背景</h2>
+<ul class="moveIn">
+<li>nodeppt是基于nodejs写的支持 <strong>Markdown!</strong> 语法的网页PPT</li>
+<li>Github：<a href="https://github.com/ksky521/nodeppt" target="_blank">https://github.com/ksky521/nodeppt</a></li>
+</ul>
 
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>使用.class/#id/自定义属性样式</h2>
+<h2>安装</h2>
 
 </hgroup><article>
 
-<pre><code class="javascript">alert(&#39;nodeppt&#39;);
+<pre><code class="bash">npm install -g nodeppt
 </code></pre>
 
 </article></section></slide>
 <slide class="slide"><section class="slide-wrapper"><hgroup>
-<h2>主页面样式</h2>
-<h3>----是上下分界线</h3>
+<h2>shell使用</h2>
 
 </hgroup><article>
 
-<p>nodeppt是基于nodejs写的支持 <strong>Markdown!</strong> 语法的网页PPT，当前版本：1.4.5</p>
-<p>Github：<a href="https://github.com/ksky521/nodeppt" target="_blank">https://github.com/ksky521/nodeppt</a></p>
+<pre><code class="bash"># 获取帮助 
+nodeppt start -h 
+
+# 绑定端口 
+nodeppt start -p &lt;port&gt;
+</code></pre>
+<pre><code class="bash">nodeppt start -p 8090 -d path/for/ppts 
+# 绑定host，默认绑定0.0.0.0 
+nodeppt start -p 8080 -d path/for/ppts -h 127.0.0.1 
+# 使用socket通信（按Q键显示/关闭二维码，手机扫描，即可控制） 
+# socket须知：1、注意手机和pc要可以相互访问，2、防火墙，3、ip 
+nodeppt start -c socket 
+# 不加-c默认使用postMessage，窗口联动，即list页面【多窗口】链接
+</code></pre>
 
 </article></section></slide>
         
