@@ -41,3 +41,22 @@ nodeppt start -c socket
 # 不加-c默认使用postMessage，窗口联动，即list页面【多窗口】链接
 ```
 
+[slide]
+## 导出Html
+----
+
+```bash
+# 获取generate帮助 
+nodeppt generate -h 
+# 使用generate命令 
+nodeppt generate filepath 
+# 导出全部，包括nodeppt的js、img和css文件夹 
+# 默认导出在publish文件夹 
+nodeppt generate ./ppts/demo.md -a 
+# 指定导出文件夹 
+nodeppt generate ./ppts/demo.md -a -o output/path
+# 导出目录下所有ppt，并且生成ppt list首页
+nodeppt path -o output/path -a
+```
+
+
