@@ -374,13 +374,13 @@
 <li>创建两个分支：master 与 hexo；</li>
 <li>设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；</li>
 <li><p>使用git clone拷贝仓库；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git@github.com:CrazyMilk/CrazyMilk.github.io.git</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://username:password@github.com/CrazyMilk/CrazyMilk.github.io.git</div></pre></td></tr></table></figure>
 </li>
-<li><p>在本地<a href="http://CrazyMilk.github.io" target="_blank" rel="external">http://CrazyMilk.github.io</a> 文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;</p>
+<li><p>在本地 CrazyMilk.github.io 文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;</p>
 </li>
 <li>修改_config.yml中的deploy参数，分支应为master；</li>
 <li>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；</li>
-<li>执行hexo g -d生成网站并部署到GitHub上。<br>这样一来，在GitHub上的<a href="http://CrazyMilk.github.io" target="_blank" rel="external">http://CrazyMilk.github.io</a> 仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。</li>
+<li>执行hexo g -d生成网站并部署到GitHub上。<br>这样一来，在GitHub上的 <a href="http://CrazyMilk.github.io" target="_blank" rel="external">http://CrazyMilk.github.io</a> 仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。</li>
 </ol>
 <h2 id="二、日常改动"><a href="#二、日常改动" class="headerlink" title="二、日常改动"></a>二、日常改动</h2><p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。</p>
 <ol>
@@ -395,7 +395,7 @@
 <li><p>使用git clone拷贝仓库（默认分支为hexo）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://username:password@github.com/CrazyMilk/CrazyMilk.github.io.git</div></pre></td></tr></table></figure>
 </li>
-<li><p>在本地新拷贝的<a href="http://CrazyMilk.github.io" target="_blank" rel="external">http://CrazyMilk.github.io</a> 文件夹下通过Git bash依次执行下列指令（记得，不需要hexo init这条指令）。</p>
+<li><p>在本地新拷贝的 CrazyMilk.github.io 文件夹下通过Git bash依次执行下列指令（记得，不需要hexo init这条指令）。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></li>
 </ol>
 
