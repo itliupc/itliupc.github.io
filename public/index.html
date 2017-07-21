@@ -369,50 +369,23 @@
       
         
           
-            <h1 id="静态资源访问"><a href="#静态资源访问" class="headerlink" title="静态资源访问"></a>静态资源访问</h1><hr>
-<p>Spring Boot默认提供静态资源目录位置需置于classpath下，目录名需符合如下规则：</p>
-<ul>
-<li>/static</li>
-<li>/public</li>
-<li>/resources</li>
-<li>/META-INF/resources</li>
-</ul>
-<p>举例：我们可以在src/main/resources/目录下创建static，在该位置放置一个图片文件。启动程序后，尝试访问<a href="http://localhost:8080/D.jpg" target="_blank" rel="external">http://localhost:8080/D.jpg</a></p>
-<h1 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h1><hr>
-<p>Spring Boot提供了默认配置的模板引擎主要有以下几种：</p>
-<ul>
-<li>Thymeleaf</li>
-<li>FreeMarker</li>
-<li>Velocity</li>
-<li>Groovy</li>
-<li>Mustache</li>
-</ul>
-<p><strong> 模板默认配置路径为：src/main/resources/templates </strong></p>
-<h1 id="Thymeleaf"><a href="#Thymeleaf" class="headerlink" title="Thymeleaf"></a>Thymeleaf</h1><hr>
-<p>Thymeleaf是一个XML/XHTML/HTML5模板引擎，可用于Web与非Web环境中的应用开发。</p>
-<p>Spring Boot中使用Thymeleaf，只需要引入下面依赖，并在默认的模板路径src/main/resources/templates下编写模板文件即可完成。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">	&lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure></p>
-<p>示例模板：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;table&gt;</div><div class="line">  &lt;thead&gt;</div><div class="line">    &lt;tr&gt;</div><div class="line">      &lt;th th:text=<span class="string">"#&#123;msgs.headers.name&#125;"</span>&gt;Name&lt;/td&gt;</div><div class="line">      &lt;th th:text=<span class="string">"#&#123;msgs.headers.price&#125;"</span>&gt;Price&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">  &lt;/thead&gt;</div><div class="line">  &lt;tbody&gt;</div><div class="line">    &lt;tr th:each=<span class="string">"prod : <span class="variable">$&#123;allProducts&#125;</span>"</span>&gt;</div><div class="line">      &lt;td th:text=<span class="string">"<span class="variable">$&#123;prod.name&#125;</span>"</span>&gt;Oranges&lt;/td&gt;</div><div class="line">      &lt;td th:text=<span class="string">"<span class="variable">$&#123;#numbers.formatDecimal(prod.price,1,2)&#125;</span>"</span>&gt;0.99&lt;/td&gt;</div><div class="line">    &lt;/tr&gt;</div><div class="line">  &lt;/tbody&gt;</div><div class="line">&lt;/table&gt;</div></pre></td></tr></table></figure></p>
-<h1 id="Thymeleaf的默认参数配置"><a href="#Thymeleaf的默认参数配置" class="headerlink" title="Thymeleaf的默认参数配置"></a>Thymeleaf的默认参数配置</h1><hr>
-<p>如有需要修改默认配置的时候，只需复制下面要修改的属性到application.properties中，并修改成需要的值，如修改模板文件的扩展名，修改默认的模板路径等。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Enable template caching.</span></div><div class="line">spring.thymeleaf.cache=<span class="literal">true</span> </div><div class="line"><span class="comment"># Check that the templates location exists.</span></div><div class="line">spring.thymeleaf.check-template-location=<span class="literal">true</span> </div><div class="line"><span class="comment"># Content-Type value.</span></div><div class="line">spring.thymeleaf.content-type=text/html </div><div class="line"><span class="comment"># Enable MVC Thymeleaf view resolution.</span></div><div class="line">spring.thymeleaf.enabled=<span class="literal">true</span> </div><div class="line"><span class="comment"># Template encoding.</span></div><div class="line">spring.thymeleaf.encoding=UTF-8 </div><div class="line"><span class="comment"># Comma-separated list of view names that should be excluded from resolution.</span></div><div class="line">spring.thymeleaf.excluded-view-names= </div><div class="line"><span class="comment"># Template mode to be applied to templates. See also StandardTemplateModeHandlers.</span></div><div class="line">spring.thymeleaf.mode=HTML5 </div><div class="line"><span class="comment"># Prefix that gets prepended to view names when building a URL.</span></div><div class="line">spring.thymeleaf.prefix=classpath:/templates/ </div><div class="line"><span class="comment"># Suffix that gets appended to view names when building a URL.</span></div><div class="line">spring.thymeleaf.suffix=.html</div><div class="line"><span class="comment"># Order of the template resolver in the chain.</span></div><div class="line">spring.thymeleaf.template-resolver-order= </div><div class="line"><span class="comment"># Comma-separated list of view names that can be resolved.</span></div><div class="line">spring.thymeleaf.view-names=</div></pre></td></tr></table></figure></p>
-<h1 id="Thymeleaf示例"><a href="#Thymeleaf示例" class="headerlink" title="Thymeleaf示例"></a>Thymeleaf示例</h1><hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line">public class HelloController &#123;</div><div class="line">    @RequestMapping(<span class="string">"/"</span>)</div><div class="line">    public String index(ModelMap map) &#123;</div><div class="line">        // 加入一个属性，用来在模板中读取</div><div class="line">        map.addAttribute(<span class="string">"host"</span>, <span class="string">"http://blog.didispace.com"</span>);</div><div class="line">        // <span class="built_in">return</span>模板文件的名称，对应src/main/resources/templates/index.html</div><div class="line">        <span class="built_in">return</span> <span class="string">"index"</span>;  </div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head lang=<span class="string">"en"</span>&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span> /&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;h1 th:text=<span class="string">"<span class="variable">$&#123;host&#125;</span>"</span>&gt;Hello World&lt;/h1&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-<h1 id="整合Spring-Security"><a href="#整合Spring-Security" class="headerlink" title="整合Spring Security"></a>整合Spring Security</h1><hr>
-<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>Principle(User), Authority(Role)和Permission是Spring Security的3个核心概念。跟通常理解上Role和Permission之间一对多的关系不同，在Spring Security中，Authority和Permission是两个完全独立的概念，两者并没有必然的联系，但可以通过配置进行关联。</p>
-<h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><p>在pom.xml中添加如下配置，引入对Spring Security的依赖。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="Spring-Security配置"><a href="#Spring-Security配置" class="headerlink" title="Spring Security配置"></a>Spring Security配置</h2><p>创建Spring Security的配置类WebSecurityConfig，具体如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Configuration</span></div><div class="line"><span class="meta">@EnableWebSecurity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebSecurityConfig</span> <span class="keyword">extends</span> <span class="title">WebSecurityConfigurerAdapter</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(HttpSecurity http)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        http</div><div class="line">            .authorizeRequests()</div><div class="line">                .antMatchers(<span class="string">"/"</span>, <span class="string">"/home"</span>).permitAll()</div><div class="line">                .anyRequest().authenticated()</div><div class="line">                .and()</div><div class="line">            .formLogin()</div><div class="line">                .loginPage(<span class="string">"/login"</span>)</div><div class="line">                .permitAll()</div><div class="line">                .and()</div><div class="line">            .logout()</div><div class="line">                .permitAll();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">    * Web层面的配置:一般用来配置无需安全检查的资源路径</div><div class="line">    */</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configure</span><span class="params">(WebSecurity web)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">      web.ignoring().antMatchers(<span class="string">"/js/**"</span>, <span class="string">"/css/**"</span>, <span class="string">"/images/**"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">    * 身份验证配置，用于注入自定义身份验证Bean和密码校验规则</div><div class="line">    */</div><div class="line">    <span class="comment">/*@Override</span></div><div class="line">    public void configure(AuthenticationManagerBuilder auth) throws Exception &#123;</div><div class="line">      auth.userDetailsService(detailsService).passwordEncoder(new BCryptPasswordEncoder());</div><div class="line">    &#125;*/</div><div class="line"></div><div class="line">    <span class="meta">@Autowired</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configureGlobal</span><span class="params">(AuthenticationManagerBuilder auth)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        auth</div><div class="line">            .inMemoryAuthentication()</div><div class="line">                .withUser(<span class="string">"user"</span>).password(<span class="string">"password"</span>).roles(<span class="string">"USER"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<ul>
-<li>通过@EnableWebSecurity注解开启Spring Security的功能</li>
-<li>继承WebSecurityConfigurerAdapter，并重写它的方法来设置一些web安全的细节</li>
-<li>configure(HttpSecurity http)方法<ul>
-<li>通过authorizeRequests()定义哪些URL需要被保护、哪些不需要被保护。例如以上代码指定了/和/home不需要任何认证就可以访问，其他的路径都必须通过身份验证。</li>
-<li>通过formLogin()定义当需要用户登录时候，转到的登录页面。</li>
-</ul>
-</li>
-<li>configureGlobal(AuthenticationManagerBuilder auth)方法，在内存中创建了一个用户，该用户的名称为user，密码为password，用户角色为USER。</li>
-</ul>
+          静态资源访问
+Spring Boot默认提供静态资源目录位置需置于classpath下，目录名需符合如下规则：
 
-          
+/static
+/public
+/resources
+/META-INF/resources
+
+举例：我们可以在src/main/resources/目录下创建static，在该位置放置
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/20/springsecurity/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -553,37 +526,20 @@
       
         
           
-            <h2 id="一、搭建流程"><a href="#一、搭建流程" class="headerlink" title="一、搭建流程"></a>一、搭建流程</h2><ol>
-<li>创建仓库，<a href="http://CrazyMilk.github.io；" target="_blank" rel="external">http://CrazyMilk.github.io；</a></li>
-<li>创建两个分支：master 与 hexo；</li>
-<li>设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；</li>
-<li><p>使用git clone拷贝仓库；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://username:password@github.com/CrazyMilk/CrazyMilk.github.io.git</div></pre></td></tr></table></figure>
-</li>
-<li><p>在本地 CrazyMilk.github.io 文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;</p>
-</li>
-<li>修改_config.yml中的deploy参数，分支应为master；</li>
-<li>依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；</li>
-<li>执行hexo g -d生成网站并部署到GitHub上。<br>这样一来，在GitHub上的 <a href="http://CrazyMilk.github.io" target="_blank" rel="external">http://CrazyMilk.github.io</a> 仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。</li>
-</ol>
-<h2 id="二、日常改动"><a href="#二、日常改动" class="headerlink" title="二、日常改动"></a>二、日常改动</h2><p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。</p>
-<ol>
-<li><p>依次执行git指令将改动推送到GitHub（此时当前分支应为hexo）；</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m <span class="string">"..."</span></div><div class="line">git push origin hexo</div></pre></td></tr></table></figure>
-</li>
-<li><p>然后才执行hexo g -d发布网站到master分支上。虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的。</p>
-</li>
-</ol>
-<h2 id="三、环境恢复"><a href="#三、环境恢复" class="headerlink" title="三、环境恢复"></a>三、环境恢复</h2><p>本地资料丢失后的流程当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：</p>
-<ol>
-<li><p>使用git clone拷贝仓库（默认分支为hexo）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://username:password@github.com/CrazyMilk/CrazyMilk.github.io.git</div></pre></td></tr></table></figure>
-</li>
-<li><p>在本地新拷贝的 CrazyMilk.github.io 文件夹下通过Git bash依次执行下列指令（记得，不需要hexo init这条指令）。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install hexo</div><div class="line">npm install</div><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></li>
-</ol>
-
-          
+          一、搭建流程
+创建仓库，http://CrazyMilk.github.io；
+创建两个分支：master 与 hexo；
+设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；
+使用git clone拷贝仓库；
+1git clone https://username:pas
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/01/hexointro/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -724,8 +680,15 @@
       
         
           
-            <iframe frameborder="0" width="100%" height="400px" src="/publish/pptintro.html"></iframe>
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/01/pptintro/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
