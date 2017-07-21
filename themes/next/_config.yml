@@ -474,7 +474,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -527,6 +527,8 @@ vendors:
   # https://github.com/hustcc/canvas-nest.js
   canvas_nest:
 
+passage_end_tag:
+  enabled: true
 
 
 # Assets
