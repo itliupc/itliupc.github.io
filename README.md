@@ -15,10 +15,6 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
-```bash
-git clone https://dobase:since1990@github.com/dobase/dobase.github.io.git
-```
-
 - Bulleted
 - List
 
