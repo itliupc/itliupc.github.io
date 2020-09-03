@@ -70,5 +70,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://itliupc:since1990@github.com/itliupc/itliupc.github.io.git
+  repo: https://itliupc:liupc1198110421@github.com/itliupc/itliupc.github.io.git
   branch: master
